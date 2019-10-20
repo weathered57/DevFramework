@@ -1,5 +1,6 @@
 ﻿using DevFramework.Northwind.Business.Abtract;
-using DevFramework.Northwind.Business.Aspects.Postsharp;
+using DevFramework.Northwind.Business.Aspects.Postsharp.TransactionAspect;
+using DevFramework.Northwind.Business.Aspects.Postsharp.ValidationAspect;
 using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
 using DevFramework.Northwind.DataAccess.Abstract;
 using DevFramework.Northwind.Entities.Concrete;
@@ -34,6 +35,13 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
         public Product Update(Product product)
         {
             return _productDal.Update(product);
+        }
+        [TransactionScopeAspect]
+        public void TransactionalOperation(Product product1, Product product2)
+        {
+            _productDal.Add(product1);
+            _productDal.Add(product2);
+
         }
     }
 }

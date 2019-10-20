@@ -6,7 +6,7 @@ using System.Text;
 using System.Linq;
 using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
 
-namespace DevFramework.Northwind.Business.Aspects.Postsharp
+namespace DevFramework.Northwind.Business.Aspects.Postsharp.ValidationAspect
 {
     [Serializable]
     public class FluentValidationAspect : OnMethodBoundaryAspect
