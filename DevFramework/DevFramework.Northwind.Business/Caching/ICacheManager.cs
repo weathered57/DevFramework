@@ -8,7 +8,7 @@ namespace DevFramework.Northwind.Business.Caching
     {
         T Get<T>(string key);
         void Add(string key, object data, int cacheTime);
-        bool isAdd(string key);
+        bool IsAdd(string key);
         void Remove(string key);
         void RemoveByPattern(string pattern);
         void Clear();

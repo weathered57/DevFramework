@@ -32,7 +32,7 @@ namespace DevFramework.Northwind.Business.Caching.Microsoft
             return (T)Cache[key];
         }
 
-        public bool isAdd(string key)
+        public bool IsAdd(string key)
         {
             return Cache.Contains(key);
         }
