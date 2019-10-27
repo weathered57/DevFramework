@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="8.5.0" />
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Ninject" Version="3.3.4" />
     <PackageReference Include="PostSharp" Version="4.2.17" />
     <PackageReference Include="System.Runtime.Caching" Version="4.6.0" />

@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Text;
 using DevFramework.Northwind.Business.Aspects.Postsharp.CacheAspect;
 using DevFramework.Northwind.Business.Caching.Microsoft;
+using DevFramework.Northwind.Business.Logging.Log4Net.Loggers;
+using DevFramework.Northwind.Business.Aspects.Postsharp.LogAspect;
 
 namespace DevFramework.Northwind.Business.Concrete.Managers
 {
@@ -21,6 +23,8 @@ namespace DevFramework.Northwind.Business.Concrete.Managers
             _productDal = productDal;
         }
         [CacheAspect(typeof(MemoryCacheManager))]
+        [LogAspect(typeof(DatabaseLogger))]
+        [LogAspect(typeof(JsonFileLogger))]
         public List<Product> GetAll()
         {
            return _productDal.GetList();
