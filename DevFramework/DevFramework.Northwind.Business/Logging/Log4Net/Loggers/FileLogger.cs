@@ -5,9 +5,9 @@ using System.Text;
 
 namespace DevFramework.Northwind.Business.Logging.Log4Net.Loggers
 {
-    public class JsonFileLogger : LoggerService
+    public class FileLogger : LoggerService
     {
-        public JsonFileLogger() : base(LogManager.GetLogger(typeof(JsonFileLogger)))
+        public FileLogger() : base(LogManager.GetLogger(typeof(FileLogger)))
         {
 
         }
